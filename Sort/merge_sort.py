@@ -1,5 +1,6 @@
 
 # 병합 정렬 : 각 정렬된 숫자들을 1개의 정렬된 숫자들로 합치는 것
+# 분할 -> 정복 -> 결합
 
 def merge_sort(arr):
 
@@ -24,21 +25,23 @@ def merge_sort(arr):
             if arr[l] < arr[h]:
 
                 temp.append(arr[l])
+
                 l += 1
             else:
 
                 temp.append(arr[h])
                 h += 1
-
+        print("1", temp)
         while l < mid:
 
             temp.append(arr[l])
             l += 1
+        print("2", temp)
         while h < high:
 
             temp.append(arr[h])
             h += 1
-
+        print("3", temp)
         for i in range(low, high):  # 정렬된 merged를 원래의 배열인 list에 넣는다.
             arr[i] = temp[i - low]
 

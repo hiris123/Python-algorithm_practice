@@ -7,19 +7,19 @@ def solve():
 
 
 def heapify(array, n, i):
-    p = i
-    l = i * 2 + 1
-    r = i * 2 + 2
+    point = i
+    left = i * 2 + 1
+    right = i * 2 + 2
 
-    if (l < n and array[p] < array[l]):
-        p = l
+    if (left < n and array[point] < array[left]):
+        point = left
 
-    if (r < n and array[p] < array[r]):
-        p = r
+    if (right < n and array[point] < array[right]):
+        point = right
 
-    if (i != p):
-        swap(array, p, i)
-        heapify(array, n, p)
+    if (i != point):
+        swap(array, point, i)
+        heapify(array, n, point)
 
 
 def heapSort(array):
