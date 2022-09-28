@@ -23,25 +23,20 @@ def merge_sort(arr):
 
         while l < mid and h < high:  # low < mid , mid < high
             if arr[l] < arr[h]:
-
                 temp.append(arr[l])
-
                 l += 1
             else:
-
                 temp.append(arr[h])
                 h += 1
-        print("1", temp)
-        while l < mid:
-
+                
+        while l < mid: # 남은 것들 temp에 넣기 
             temp.append(arr[l])
             l += 1
-        print("2", temp)
-        while h < high:
 
+        while h < high: # 남은 것들 temp 에 넣기 
             temp.append(arr[h])
             h += 1
-        print("3", temp)
+
         for i in range(low, high):  # 정렬된 merged를 원래의 배열인 list에 넣는다.
             arr[i] = temp[i - low]
 

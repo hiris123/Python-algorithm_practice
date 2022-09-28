@@ -15,10 +15,12 @@ def quick_sort(array, start, end):
         # pivot을 기준으로 배열 오른쪽이 큰 데이터이면
         while right > start and array[right] >= array[pivot]:
             right -= 1
+        
         if left > right:  # 만약 pivot을 기준으로 순차적으로 왔는데 엇갈리게 되면
             array[right], array[pivot] = array[pivot], array[right]
         else:
             array[right], array[left] = array[left], array[right]
+    
     quick_sort(array, start, right - 1)  # start는 항상 0
     quick_sort(array, right + 1, end)  # end는 항상 array 끝
 
