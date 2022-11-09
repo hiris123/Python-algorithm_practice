@@ -34,14 +34,6 @@ print(min_list)
 
 min = [0] * M
 
-for i in range(len(min_list)):  # i : 0 / j:12,3, / i=1, j:2,3/ i =2 j : 3
-
-
-final_list = []
-for i in range(len(min_list)):  # i : 0 / j:12,3, / i=1, j:2,3/ i =2 j : 3
-    for j in range(i+1, len(min_list)):  # j 1,2,3,
-        if (min_list[i][0] == min_list[j][0] and min_list[i][1] == min_list[j][1]):
-            min_list[i][2] += min_list[j][2]
 
 ######### 중복 제거 ########
 
