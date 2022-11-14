@@ -23,5 +23,6 @@ for city, dist in enumerate(distance):
     if dist == K:
         print(city, end =' ')
         check=True
+        
 if not check:
     print(-1)
